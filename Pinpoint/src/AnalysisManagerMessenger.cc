@@ -53,9 +53,6 @@
   fSaveTrackCmd->SetGuidance("whether save the information of all tracks");
   fSaveTrackCmd->SetParameterName("saveTrack", true);
   fSaveTrackCmd->SetDefaultValue(false);
-
-  fFASER2Dir = new G4UIdirectory("/out/faser/");
-  fFASER2Dir->SetGuidance("flare output control");
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
@@ -65,7 +62,6 @@ AnalysisManagerMessenger::~AnalysisManagerMessenger()
   delete fFileCmd;
   delete fSaveTrackCmd;
   delete fOutDir;
-  delete fFASER2Dir;
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......

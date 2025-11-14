@@ -5,6 +5,9 @@
 RunAction::RunAction() :
   G4UserRunAction() 
 {
+  //* This will ensure that the AnalysisManager singleton is created at the start of the run action
+  //* We need to do this so that we can pass macro commands to it before the run starts
+  AnalysisManager* analysis = AnalysisManager::GetInstance();
 }
 
 void RunAction::BeginOfRunAction(const G4Run*) {
